@@ -57,7 +57,7 @@ function Header() {
             </div>
             <span className="flex flex-col px-2 text-sm">
               <span className="text-gray-500">Trova</span>
-              <span className="font-semibold text-[#FF8C52]/80">Agenzia</span>
+              <span className="font-semibold text-[#359FA0]/80">Agenzia</span>
             </span>
           </a>
         </div>

@@ -25,7 +25,7 @@ function Hero() {
         <div className="w-full max-w-6xl mx-auto mb-10 bg-[#FFF0C5] rounded-xl shadow-lg flex flex-wrap md:flex-nowrap overflow-hidden">
           {/* Destinazione */}
           <button className="flex items-center gap-3 px-6 py-4 flex-1 hover:bg-[#ffe8a0] transition cursor-pointer">
-            <FaMapMarkerAlt className="text-2xl text-orange-500" />
+            <FaMapMarkerAlt className="text-2xl text-[#359FA0]" />
             <div className="flex flex-col text-left">
               <span className="text-xs text-gray-500">Destinazione</span>
               <span className="font-semibold">Dove vuoi andare?</span>
@@ -36,7 +36,7 @@ function Hero() {
 
           {/* Tipologia */}
           <button className="flex items-center gap-3 px-6 py-4 flex-1 hover:bg-[#ffe8a0] transition cursor-pointer">
-            <FaUmbrellaBeach className="text-2xl text-orange-500" />
+            <FaUmbrellaBeach className="text-2xl text-[#FF8C52]" />
             <div className="flex flex-col text-left">
               <span className="text-xs text-gray-500">Tipologia</span>
               <span className="font-semibold">Villaggio, Tour...</span>
@@ -47,7 +47,7 @@ function Hero() {
 
           {/* Ospiti */}
           <button className="flex items-center gap-3 px-6 py-4 flex-1 hover:bg-[#ffe8a0] transition cursor-pointer">
-            <FaUsers className="text-2xl text-orange-500" />
+            <FaUsers className="text-2xl text-[#FF8C52]" />
             <div className="flex flex-col text-left">
               <span className="text-xs text-gray-500">Ospiti</span>
               <span className="font-semibold">2 adulti</span>
@@ -58,7 +58,7 @@ function Hero() {
 
           {/* Data */}
           <button className="flex items-center gap-3 px-6 py-4 flex-1 hover:bg-[#ffe8a0] transition cursor-pointer">
-            <FaCalendarAlt className="text-2xl text-orange-500" />
+            <FaCalendarAlt className="text-2xl text-[#FF8C52]" />
             <div className="flex flex-col text-left">
               <span className="text-xs text-gray-500">Partenza e ritorno</span>
               <span className="font-semibold">Seleziona date</span>
