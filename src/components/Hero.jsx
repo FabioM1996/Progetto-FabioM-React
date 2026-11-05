@@ -25,10 +25,10 @@ function Hero() {
         <div className="w-full max-w-6xl mx-auto mb-10 bg-[#FFF0C5] rounded-xl shadow-lg flex flex-wrap md:flex-nowrap overflow-hidden">
           {/* Destinazione */}
           <button className="flex items-center gap-3 px-6 py-4 flex-1 hover:bg-[#ffe8a0] transition cursor-pointer">
-            <FaMapMarkerAlt className="text-2xl text-[#359FA0]" />
+            <FaMapMarkerAlt className="text-2xl text-[#FF8C52]" />
             <div className="flex flex-col text-left">
               <span className="text-xs text-gray-500">Destinazione</span>
-              <span className="font-semibold">Dove vuoi andare?</span>
+              <span className="font-semibold text-[#359FA0]">Dove vuoi andare?</span>
             </div>
           </button>
 
@@ -39,7 +39,7 @@ function Hero() {
             <FaUmbrellaBeach className="text-2xl text-[#FF8C52]" />
             <div className="flex flex-col text-left">
               <span className="text-xs text-gray-500">Tipologia</span>
-              <span className="font-semibold">Villaggio, Tour...</span>
+              <span className="font-semibold text-[#359FA0]">Villaggio, Tour...</span>
             </div>
           </button>
 
@@ -50,7 +50,7 @@ function Hero() {
             <FaUsers className="text-2xl text-[#FF8C52]" />
             <div className="flex flex-col text-left">
               <span className="text-xs text-gray-500">Ospiti</span>
-              <span className="font-semibold">2 adulti</span>
+              <span className="font-semibold text-[#359FA0]">2 adulti</span>
             </div>
           </button>
 
@@ -61,7 +61,7 @@ function Hero() {
             <FaCalendarAlt className="text-2xl text-[#FF8C52]" />
             <div className="flex flex-col text-left">
               <span className="text-xs text-gray-500">Partenza e ritorno</span>
-              <span className="font-semibold">Seleziona date</span>
+              <span className="font-semibold text-[#359FA0]">Seleziona date</span>
             </div>
           </button>
 
