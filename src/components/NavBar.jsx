@@ -40,13 +40,14 @@ function NavBar() {
     top-1/2
     -translate-y-1/2
     bg-[#FF8C52]
-    text-white
+    text-gray-600
     px-3
     py-1
     rounded-full
     text-sm
     font-semibold
     shadow-md
+    hover:bg-[#e07c4a] active:bg-[#8AD6D1]
   "
 >
   📸 Crea una Cartolina

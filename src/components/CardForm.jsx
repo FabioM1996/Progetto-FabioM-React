@@ -36,7 +36,8 @@ function CardForm({ addCity }) {
   };
   return (
     <>
-    <h2 className="text-[#359FA0] mt-2 text-left">Non trovi una card adatta a te? Generane una compilando questo !</h2>
+    <h2 className="text-[#8AD6D1] mt-2 text-left">Non trovi una card adatta a te? Generane una compilando questo !</h2>
+    <p className="text-[#359FA0] text-left">Inserisci un'immagine a tua scelta tramite indirizzo URL oppure un'immagine salvata sul tuo PC.</p>
     <form
       onSubmit={handleSubmit}
       className="flex flex-col gap-1 w-80 mb-10 bg-[#FFF0C5] p-3 rounded-lg mt-4 mx-10"

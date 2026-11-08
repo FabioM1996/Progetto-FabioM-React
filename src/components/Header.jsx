@@ -56,7 +56,7 @@ function Header() {
               </svg>
             </div>
             <span className="flex flex-col px-2 text-sm">
-              <span className="text-gray-500">Trova</span>
+              <span className="text-gray-600">Trova</span>
               <span className="font-semibold text-[#359FA0]/80">Agenzia</span>
             </span>
           </a>
@@ -65,7 +65,7 @@ function Header() {
         <a href="#">
         <div className="p-1 ml-1 flex items-center gap-2 border-r border-[#9ca3af] hover:bg-orange-200 ">
           <span>📱</span>
-          <div className="flex flex-col text-sm">
+          <div className="flex flex-col text-sm text-gray-600">
             <span className="text-center text-xs">Chiamaci al </span>
             <span className="text-start">00000000011</span>
           </div>

@@ -85,10 +85,13 @@ export default function Home() {
           />
         </div>
         <Hero></Hero>
-        <section className="w-full h-10">
-          <h2 id="cartoline" className="text-[#359FA0] mt-3">
+        <section className="w-full h-10 mb-2">
+          <h2 id="cartoline" className=" text-[#8AD6D1] mt-3">
             Seleziona una card per creare la tua cartolina personalizzata!
           </h2>
+          <p className="text-[#359FA0]">
+            Stampa o scarica una cartolina e mandala ad amici o parenti.
+          </p>
         </section>
         <div className="grid grid-cols-4 gap-5">
           {cities.map((city) => (
@@ -105,28 +108,41 @@ export default function Home() {
           ))}
         </div>
         {selectedCity && (
-          <div className="flex flex-col gap-1 w-125">
-            <div
-              ref={cartolinaRef}
-              className="bg-white p-5 rounded-xl w-125 shadow-lg"
-            >
-              {/* className="bg-white p-6 rounded-xl w-[500px]" */}
-              <h2 className="text-3xl font-bold text-[#FF8C52] mb-4">
-                {selectedCity.title}
-              </h2>
-              <img
-                className="w-full h-60 object-cover rounded-lg"
-                src={selectedCity.imgUrl}
-                alt={selectedCity.title}
-              />
-              <p className="mt-4 text-gray-600">{selectedCity.description}</p>
+          <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
+            <div className="flex flex-col gap-2">
+              <div
+                ref={cartolinaRef}
+                className="bg-white p-5 rounded-xl w-[500px] shadow-lg"
+              >
+                <h2 className="text-3xl font-bold text-[#FF8C52] mb-4">
+                  {selectedCity.title}
+                </h2>
+
+                <img
+                  className="w-full h-60 object-cover rounded-lg"
+                  src={selectedCity.imgUrl}
+                  alt={selectedCity.title}
+                />
+
+                <p className="mt-4 text-gray-600">{selectedCity.description}</p>
+              </div>
+
+              <div className="flex gap-2 justify-end">
+                <button
+                  onClick={scaricaCartolina}
+                  className="bg-[#FF8C52] px-3 py-2 rounded text-gray-600"
+                >
+                  Scarica
+                </button>
+
+                <button
+                  onClick={() => setSelectedCity(null)}
+                  className="bg-[#8AD6D1] text-gray-600 px-3 py-2 rounded"
+                >
+                  Chiudi
+                </button>
+              </div>
             </div>
-            <button
-              onClick={scaricaCartolina}
-              className="bg-[#FF8C52] hover:bg-[#e07c4a] text-gray-700 p-1"
-            >
-              Scarica Cartolina
-            </button>
           </div>
         )}
         <div className="space"></div>
