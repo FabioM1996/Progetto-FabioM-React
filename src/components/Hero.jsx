@@ -18,7 +18,7 @@ function Hero() {
         }}
       >
         <div className="text-[#FF8C52] text-center bg-[#fff0c57f] text-shadow-[#359FA0] text-shadow-sm p-1 mt-1">
-          <h1>Esperienze uniche in australia e oltre!</h1>
+          <h1>Esperienze uniche in Australia e oltre!</h1>
           <p></p>
         </div>
         {/* BARRA */}

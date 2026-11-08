@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <>
-      <nav >
-        <ul className="flex gap-20 justify-center bg-[#FFF0C5]  ">
+      <nav className="relative">
+        <ul className="flex gap-20 justify-center bg-[#FFF0C5]">
           {/* <li>
             <img
               className="w-10 h-10"
@@ -33,6 +33,24 @@ function NavBar() {
             </a>
           </li>
         </ul>
+<a href="#cartoline"
+  className="
+    absolute
+    right-6
+    top-1/2
+    -translate-y-1/2
+    bg-[#FF8C52]
+    text-white
+    px-3
+    py-1
+    rounded-full
+    text-sm
+    font-semibold
+    shadow-md
+  "
+>
+  📸 Crea una Cartolina
+</a>
       </nav>
     </>
   );

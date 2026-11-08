@@ -36,7 +36,7 @@ function CardForm({ addCity }) {
   };
   return (
     <>
-    <h3 className="text-left">Crea la tua cartolina</h3>
+    <h2 className="text-[#359FA0] mt-2 text-left">Non trovi una card adatta a te? Generane una compilando questo !</h2>
     <form
       onSubmit={handleSubmit}
       className="flex flex-col gap-1 w-80 mb-10 bg-[#FFF0C5] p-3 rounded-lg mt-4 mx-10"
@@ -53,12 +53,12 @@ function CardForm({ addCity }) {
         onChange={handleInputChange}
       />
       <label htmlFor="description" className="self-start text-[#359FA0] font-semibold">
-        Descrizione
+        Inserisci il tuo messaggio
       </label>
       <textarea
         name="description"
         id="description"
-        className="bg-gray-700 self-start border border-transparent hover:border-white mb-1"
+        className="bg-gray-700 self-start border border-transparent hover:border-white mb-1 p-1"
         value={formData.description}
         onChange={handleInputChange}
       />
@@ -86,7 +86,7 @@ function CardForm({ addCity }) {
       />
       <button
         type="submit"
-        className="text-gray-600 bg-[#FF8C52] font-bold p-1 border border-transparent hover:border-white hover:border-2"
+        className="text-gray-600 bg-[#FF8C52] font-bold p-1 hover:bg-[#e07c4a] active:bg-[#8AD6D1]"
       >
         Aggiungi Card
       </button>
