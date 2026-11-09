@@ -62,7 +62,9 @@ export default function Home() {
   const cartolinaRef = useRef();
 
   const scaricaCartolina = async () => {
-    const canvas = await html2canvas(cartolinaRef.current);
+    const canvas = await html2canvas(cartolinaRef.current, {
+      useCORS: true,
+    });
 
     const link = document.createElement("a");
 
@@ -112,7 +114,7 @@ export default function Home() {
             <div className="flex flex-col gap-2">
               <div
                 ref={cartolinaRef}
-                className="bg-white p-5 rounded-xl w-[500px] shadow-lg"
+                className="bg-[#FFF0C5] p-5 rounded-xl w-125 shadow-lg"
               >
                 <h2 className="text-3xl font-bold text-[#FF8C52] mb-4">
                   {selectedCity.title}
@@ -122,22 +124,25 @@ export default function Home() {
                   className="w-full h-60 object-cover rounded-lg"
                   src={selectedCity.imgUrl}
                   alt={selectedCity.title}
+                  crossOrigin="anonymous"
                 />
 
-                <p className="mt-4 text-gray-600">{selectedCity.description}</p>
+                <p className="mt-4 text-[#4a5565]">
+                  {selectedCity.description}
+                </p>
               </div>
 
               <div className="flex gap-2 justify-end">
                 <button
                   onClick={scaricaCartolina}
-                  className="bg-[#FF8C52] px-3 py-2 rounded text-gray-600"
+                  className="bg-[#FF8C52] hover:bg-[#e07c4a] px-3 py-2 rounded text-[#4a5565]"
                 >
                   Scarica
                 </button>
 
                 <button
                   onClick={() => setSelectedCity(null)}
-                  className="bg-[#8AD6D1] text-gray-600 px-3 py-2 rounded"
+                  className="bg-[#8AD6D1] hover:bg-[#359FA0] text-[#4a5565] px-3 py-2 rounded"
                 >
                   Chiudi
                 </button>
