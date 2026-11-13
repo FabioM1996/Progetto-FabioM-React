@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Snowburst+One&display=swap");
 .counter {
   font-size: 16px;
   padding: 5px 10px;
@@ -176,7 +177,6 @@ header {
     rgba(255, 140, 82, 1) 0%,
     rgba(255, 140, 82, 1) 15%,
     rgba(255, 240, 197, 1) 85%
-
   );
 }
 
@@ -193,7 +193,32 @@ header {
   color: #fff0c5;
   font-size: 28px;
 }
+.snowburst-one-regular {
+  font-family: "Snowburst One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: xx-large;
+}
 
-.space{
+.space {
   height: 100px;
+}
+/* BORDO CARTOLINA */
+.cornice-mare {
+  background-color: skyblue;
+  border: 20px solid transparent;
+  border-image: url("./assets/michelle-maria-water-1330252.jpg") 30 round;
+  border-radius: 10px;
+}
+/* BORDO CARTOLINA SMERALDO */
+.cornice-smeraldi {
+  border: 20px solid transparent;
+  border-image: url("./assets/verde-smeraldo.jpg") 30 round;
+  border-radius: 10px;
+}
+
+.cornice-lavanda {
+  border: 20px solid transparent;
+  border-image: url("./assets/lavanda-cornice.jpg") 30 round;
+  border-radius: 10px;
 }

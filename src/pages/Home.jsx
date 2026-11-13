@@ -6,11 +6,35 @@ import Card from "../components/Card";
 import CardForm from "../components/CardForm";
 import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
+import Pennellata from "../components/Pennellata";
 
 export default function Home() {
   const addCity = (city) => {
     setCities([...cities, city]);
   };
+  //LOGICA CORNICE CARTOLINA
+  const [temaCartolina, setTemaCartolina] = useState("smeraldo");
+
+  const temiCartolina = {
+    smeraldo: {
+      cornice: "cornice-smeraldi",
+      titolo: "text-emerald-700",
+      pennellata: "#D5DFC0",
+    },
+
+    mare: {
+      cornice: "cornice-mare",
+      titolo: "text-cyan-700",
+      pennellata: "#B9E3DF",
+    },
+    lavanda: {
+      cornice: "cornice-lavanda",
+      titolo: "text-purple-700",
+      pennellata: "#DCCCEB",
+    },
+  };
+  const tema = temiCartolina[temaCartolina];
+
   // trasformiamo il nostro array in uno state
   const [cities, setCities] = useState([
     {
@@ -44,7 +68,7 @@ export default function Home() {
     },
     {
       id: 3,
-      isVisited: false,
+      isVisited: true,
       title: "Torino",
       textSize: "text-base",
       description:
@@ -114,10 +138,16 @@ export default function Home() {
             <div className="flex flex-col gap-2">
               <div
                 ref={cartolinaRef}
-                className="bg-[#FFF0C5] p-5 rounded-xl w-125 shadow-lg"
+                className={`bg-[#FFF0C5] p-5 w-125 shadow-lg ${tema.cornice}`}
               >
-                <h2 className="text-3xl font-bold text-[#FF8C52] mb-4">
-                  {selectedCity.title}
+                <h2
+                  className={`relative isolate inline-block text-3xl ${tema.titolo} mb-4 px-7 py-4 snowburst-one-regular`}
+                >
+                  <Pennellata colore={tema.pennellata} />
+
+                  <span className="relative z-10 inline-block -translate-y-1">
+                    {selectedCity.title}
+                  </span>
                 </h2>
 
                 <img
@@ -151,7 +181,11 @@ export default function Home() {
           </div>
         )}
         <div className="space"></div>
-        <CardForm addCity={addCity}></CardForm>
+        <CardForm
+          addCity={addCity}
+          tema={temaCartolina}
+          setTema={setTemaCartolina}
+        ></CardForm>
       </main>
       <section id="spacer"></section>
     </>
