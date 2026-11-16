@@ -141,7 +141,7 @@ export default function Home() {
                 className={`bg-[#FFF0C5] p-5 w-125 shadow-lg ${tema.cornice}`}
               >
                 <h2
-                  className={`relative isolate inline-block text-3xl ${tema.titolo} mb-4 px-7 py-4 snowburst-one-regular`}
+                  className={`relative isolate inline-block text-3xl ${tema.titolo} mb-2 px-7 py-4 snowburst-one-regular`}
                 >
                   <Pennellata colore={tema.pennellata} />
 
@@ -151,7 +151,7 @@ export default function Home() {
                 </h2>
 
                 <img
-                  className="w-full h-60 object-cover rounded-lg"
+                  className="w-full h-64 object-cover rounded-lg"
                   src={selectedCity.imgUrl}
                   alt={selectedCity.title}
                   crossOrigin="anonymous"
