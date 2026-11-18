@@ -37,7 +37,7 @@ function CardForm({ addCity, tema, setTema }) {
   return (
     <>
       <h2 className="text-[#8AD6D1] mt-2 text-left">
-        Non trovi una card adatta a te? Generane una compilando questo !
+        Non trovi una card adatta a te? Generane una compilando questo form !
       </h2>
       <p className="text-[#359FA0] text-left">
         Inserisci un'immagine a tua scelta tramite indirizzo URL oppure

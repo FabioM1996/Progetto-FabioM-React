@@ -1,12 +1,12 @@
 import badgeImg from "../assets/badge_visitato_cerchio.png"
 function Card({ title, imgUrl, children, isVisited, textSize, onCardClick }) {
   return (
-    <div onClick={onCardClick} className="group mx-auto mt-2 rounded-2xl overflow-hidden bg-[#FFF0C5] h-88 border-2 border-[#FFF0C5]">
+    <div onClick={onCardClick} className="relative group mx-auto mt-2 rounded-2xl overflow-hidden bg-[#FFF0C5] h-88 border-2 border-[#FFF0C5]">
       <img src={imgUrl} alt="picture" className="h-48 w-full group-hover:scale-110 transition duration-500" />
       <div className="flex flex-col p-2.5">
         <h2 className="text-2xl text-[#FF8C52] font-bold">{title}</h2>
         <p className={`${textSize} text-gray-500`}>{children}</p>
-        <span>{isVisited ? <img alt="badge" className="size-16 bg-[#FFF0C5]" src={badgeImg}/> : "Non visitata"}</span>
+        <span className="absolute bottom-0.5 left-0.5">{isVisited ? <img alt="badge" className="size-16 bg-[#FFF0C5]" src={badgeImg}/> : "Non visitata"}</span>
       </div>
     </div>
   );

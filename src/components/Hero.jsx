@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import {
   FaMapMarkerAlt,
   FaUmbrellaBeach,
@@ -22,7 +23,8 @@ function Hero() {
           <p></p>
         </div>
         {/* BARRA */}
-        <div className="w-full max-w-6xl mx-auto mb-10 bg-[#FFF0C5] rounded-xl shadow-lg flex flex-wrap md:flex-nowrap overflow-hidden">
+        {/* <Link to="/destinazioni"> */}
+        <Link to="/destinazioni" className="w-full max-w-6xl mx-auto mb-10 bg-[#FFF0C5] rounded-xl shadow-lg flex flex-wrap md:flex-nowrap overflow-hidden">
           {/* Destinazione */}
           <button className="flex items-center gap-3 px-6 py-4 flex-1 hover:bg-[#ffe8a0] transition cursor-pointer">
             <FaMapMarkerAlt className="text-2xl text-[#FF8C52]" />
@@ -69,7 +71,8 @@ function Hero() {
           <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 transition">
             Cerca
           </button>
-        </div>
+        </Link>
+        {/* </Link> */}
       </section>
     </>
   );

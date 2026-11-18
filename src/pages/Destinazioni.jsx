@@ -1,8 +1,8 @@
 import greciaImg from "../assets/greciaa.webp";
 import spagnaImg from "../assets/spagnaa.jpg";
 import italiaImg from "../assets/italia.jpg";
-import turchiaImg from "../assets/turchia.jpg"
-import croaziaImg from "../assets/croazia.jpg"
+import turchiaImg from "../assets/turchia.jpg";
+import croaziaImg from "../assets/croaziaa.jpg";
 import {
   FaMapMarkerAlt,
   FaUmbrellaBeach,
@@ -311,7 +311,7 @@ export default function Destinazioni() {
                     src={turchiaImg}
                   ></img>
               )}
-              {selectedCountry?.name === "Crozia" && (
+              {selectedCountry?.name === "Croazia" && (
                   <img
                     className="h-full w-full object-cover rounded-xl"
                     src={croaziaImg}
