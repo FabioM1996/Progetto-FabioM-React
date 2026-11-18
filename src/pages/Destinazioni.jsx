@@ -1,5 +1,8 @@
 import greciaImg from "../assets/greciaa.webp";
 import spagnaImg from "../assets/spagnaa.jpg";
+import italiaImg from "../assets/italia.jpg";
+import turchiaImg from "../assets/turchia.jpg"
+import croaziaImg from "../assets/croazia.jpg"
 import {
   FaMapMarkerAlt,
   FaUmbrellaBeach,
@@ -28,6 +31,26 @@ export default function Destinazioni() {
             "Minorca",
           ],
         },
+        {
+          name: "Italia",
+          cities: [
+            "Roma",
+            "Venezia",
+            "Milano",
+            "Napoli",
+            "Palermo",
+            "Sardegna",
+            "Costiera Amalfitana",
+          ],
+        },
+        {
+          name: "Croazia",
+          cities: ["Dubrovnik", "Spalato", "Zara", "Hvar"],
+        },
+        {
+          name: "Turchia",
+          cities: ["Istanbul", "Antalya", "Bodrum", "Izmir"],
+        },
       ],
     },
     {
@@ -37,6 +60,32 @@ export default function Destinazioni() {
         {
           name: "Repubblica Dominicana",
           cities: ["Punta Cana", "Bayahibe"],
+        },
+        {
+          name: "Cuba",
+          cities: ["L'Avana", "Varadero", "Trinidad", "Cayo Coco"],
+        },
+        {
+          name: "Giamaica",
+          cities: ["Montego Bay", "Negril", "Ocho Rios"],
+        },
+        {
+          name: "Bahamas",
+          cities: ["Nassau", "Paradise Island", "Freeport"],
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "Nord Europa",
+      countries: [
+        {
+          name: "Norvegia",
+          cities: ["Oslo", "Bergen", "Tromsø", "Geiranger"],
+        },
+        {
+          name: "Islanda",
+          cities: ["Reykjavik", "Akureyri", "Vik"],
         },
       ],
     },
@@ -101,9 +150,9 @@ export default function Destinazioni() {
 
   return (
     <div className="p-3">
-      <h3 className="mb-4 mt-3 text-3xl text-[#359FA0]">I nostri viaggi</h3>
+      <h3 className="mb-4 mt-2 text-3xl text-[#359FA0]">I nostri viaggi</h3>
       {/* BARRA */}
-      <div className="w-full max-w-6xl mx-auto mb-10 bg-[#FFF0C5] rounded-xl shadow-lg flex flex-wrap md:flex-nowrap overflow-hidden">
+      <div className="w-full max-w-6xl mx-auto mb-8 bg-[#FFF0C5] rounded-xl shadow-lg flex flex-wrap md:flex-nowrap overflow-hidden">
         {/* Destinazione */}
         <button
           onClick={() => setActiveSection("destination")}
@@ -176,7 +225,7 @@ export default function Destinazioni() {
 
       {/* menu sinistra */}
       {activeSection === "destination" && (
-        <section className="grid grid-cols-[250px_1fr_350px] gap-8 bg-[#FFF0C5] p-2">
+        <section className="grid grid-cols-[250px_1fr_350px] gap-8 bg-[#FFF0C5] p-3">
           <aside className="flex flex-col gap-2">
             {destinations.map((area) => (
               <button
@@ -199,11 +248,11 @@ export default function Destinazioni() {
               <article key={country.name}>
                 <button
                   onClick={() => handleCountryChange(country)}
-                  className={`w-full text-left px-3 py-2 rounded-md font-semibold transition-all
+                  className={`w-full text-left px-3 py-2 rounded-md font-semibold transition-all mb-1
                           ${
                             selectedCountry?.name === country.name
-                              ? "bg-[#359FA0] text-white"
-                              : "bg-white text-[#359FA0] hover:bg-[#8AD6D1]"
+                              ? "bg-[#FF8C52] text-white"
+                              : "bg-[#8AD6D1] text-[#359FA0] hover:bg-[#359FA0] hover:text-white"
                           }`}
                 >
                   {country.name}
@@ -249,6 +298,24 @@ export default function Destinazioni() {
                   className="h-full w-full object-cover rounded-xl"
                   src={spagnaImg}
                 ></img>
+              )}
+              {selectedCountry?.name === "Italia" && (
+                  <img
+                    className="h-full w-full object-cover rounded-xl"
+                    src={italiaImg}
+                  ></img>
+              )}
+              {selectedCountry?.name === "Turchia" && (
+                  <img
+                    className="h-full w-full object-cover rounded-xl"
+                    src={turchiaImg}
+                  ></img>
+              )}
+              {selectedCountry?.name === "Crozia" && (
+                  <img
+                    className="h-full w-full object-cover rounded-xl"
+                    src={croaziaImg}
+                  ></img>
               )}
             </div>
           </div>

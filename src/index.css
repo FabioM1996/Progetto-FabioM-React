@@ -4,7 +4,7 @@
   --font-narnoor: "Narnoor", sans-serif;
 }
 :root {
-  --text: #6b6375;
+  /* --text: #6b6375; */
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
@@ -37,7 +37,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
+    /* --text: #9ca3af; */
     --text-h: #f3f4f6;
     --bg: #172021;
     --border: #2e303a;

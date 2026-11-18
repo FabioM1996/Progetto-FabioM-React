@@ -35,8 +35,8 @@ function Header() {
         </div>
         {/* primo div */}
         <div className="p-2 ml-1">
-          <a
-            href="#"
+          <Link
+            to="/agenzie"
             className="flex items-center gap-0.5 border border-[#9ca3af] p-0.5 rounded-2xl hover:bg-orange-200"
           >
             <div>
@@ -59,7 +59,7 @@ function Header() {
               <span className="text-gray-600">Trova</span>
               <span className="font-semibold text-[#359FA0]/80">Agenzia</span>
             </span>
-          </a>
+          </Link>
         </div>
         {/* SECONDO DIV */}
         <a href="#">

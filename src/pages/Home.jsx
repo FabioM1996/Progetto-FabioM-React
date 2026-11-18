@@ -8,6 +8,8 @@ import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import Pennellata from "../components/Pennellata";
 
+import badgeImg from "../assets/badge_visitato_cerchio.png";
+
 export default function Home() {
   const addCity = (city) => {
     setCities([...cities, city]);
@@ -18,18 +20,18 @@ export default function Home() {
   const temiCartolina = {
     smeraldo: {
       cornice: "cornice-smeraldi",
-      titolo: "text-emerald-700",
+      titolo: "text-[#007a55]", // text-emerald-700
       pennellata: "#D5DFC0",
     },
 
     mare: {
       cornice: "cornice-mare",
-      titolo: "text-cyan-700",
+      titolo: "text-[#007595]", // text-cyan-700
       pennellata: "#B9E3DF",
     },
     lavanda: {
       cornice: "cornice-lavanda",
-      titolo: "text-purple-700",
+      titolo: "text-[#8200db]", // text-purple-700
       pennellata: "#DCCCEB",
     },
   };
@@ -134,7 +136,7 @@ export default function Home() {
           ))}
         </div>
         {selectedCity && (
-          <div className="fixed inset-0 bg-black/60 flex justify-center items-center z-50">
+          <div className="fixed inset-0 bg-[#00000099] flex justify-center items-center z-50">
             <div className="flex flex-col gap-2">
               <div
                 ref={cartolinaRef}
@@ -149,13 +151,21 @@ export default function Home() {
                     {selectedCity.title}
                   </span>
                 </h2>
-
-                <img
-                  className="w-full h-64 object-cover rounded-lg"
-                  src={selectedCity.imgUrl}
-                  alt={selectedCity.title}
-                  crossOrigin="anonymous"
-                />
+                <div className="relative">
+                  <img
+                    className="w-full h-64 object-cover rounded-lg"
+                    src={selectedCity.imgUrl}
+                    alt={selectedCity.title}
+                    crossOrigin="anonymous"
+                  />
+                  {selectedCity.isVisited && (
+                    <img
+                      src={badgeImg}
+                      alt="Visitata"
+                      className="absolute top-2 right-2 size-18 rotate-12"
+                    />
+                  )}
+                </div>
 
                 <p className="mt-4 text-[#4a5565]">
                   {selectedCity.description}
