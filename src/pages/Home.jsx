@@ -4,7 +4,6 @@ import html2canvas from "html2canvas";
 import "../App.css";
 import Card from "../components/Card";
 import CardForm from "../components/CardForm";
-import NavBar from "../components/NavBar";
 import Hero from "../components/Hero";
 import Pennellata from "../components/Pennellata";
 
@@ -103,7 +102,6 @@ export default function Home() {
 
   return (
     <>
-      <NavBar></NavBar>
       <main className="p-2.5 m-2.5">
         <div className="fixed z-30 bottom-2 right-2 size-32">
           <img

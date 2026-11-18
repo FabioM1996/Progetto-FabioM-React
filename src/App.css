@@ -212,12 +212,14 @@ header {
 }
 /* BORDO CARTOLINA SMERALDO */
 .cornice-smeraldi {
+  background-color: rgb(177, 235, 177);
   border: 20px solid transparent;
   border-image: url("./assets/verde-smeraldo.jpg") 30 round;
   border-radius: 10px;
 }
 
 .cornice-lavanda {
+  background-color: rgb(227, 186, 242);
   border: 20px solid transparent;
   border-image: url("./assets/lavanda-cornice.jpg") 30 round;
   border-radius: 10px;
