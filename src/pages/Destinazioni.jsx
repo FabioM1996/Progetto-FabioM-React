@@ -221,7 +221,8 @@ export default function Destinazioni() {
         {/* Bottone cerca */}
         <button
           disabled={!canConfirm}
-          className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 transition opacity-50"
+          onClick={() => setActiveSection("summary")}
+          className="bg-orange-400 hover:bg-orange-500 text-white font-bold px-8 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Conferma
         </button>
