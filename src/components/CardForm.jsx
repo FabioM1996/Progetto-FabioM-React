@@ -56,6 +56,7 @@ function CardForm({ addCity, tema, setTema }) {
         <input
           name="title"
           id="title"
+          required
           className="bg-gray-700 self-start border border-transparent hover:border-white mb-1 text-[#8AD6D1] p-0.5 "
           type="text"
           value={formData.title}
@@ -83,6 +84,7 @@ function CardForm({ addCity, tema, setTema }) {
         <input
           id="img"
           name="imgUrl"
+          required
           className="bg-gray-700 self-start border border-transparent hover:border-white mb-1"
           type="text"
           value={formData.imgUrl}
