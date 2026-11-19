@@ -24,20 +24,20 @@ function NavBar() {
             </Link>
           </li>
           <li className="hover:bg-[#ff8c529c] h-13.25 flex justify-center items-center">
-            <a
-              href=""
+            <Link
+              to="/tour-turistico"
               className="a p-2  text-[#359FA0] border-x-2 border-x-[#ff8c5293]"
             >
               Tour turistico
-            </a>
+            </Link>
           </li>
           <li className="hover:bg-[#ff8c529c]  h-13.25 flex justify-center items-center">
-            <a
-              href=""
+            <Link
+              to="esperienze-in-natura"
               className="a p-2  text-[#359FA0] border-x-2 border-x-[#ff8c5293]"
             >
               Esperienze in natura
-            </a>
+            </Link>
           </li>
         </ul>
         {location.pathname === "/" && (

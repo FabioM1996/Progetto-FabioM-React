@@ -5,6 +5,8 @@ import Contatti from "./pages/Contatti";
 import Mappa from "./pages/Mappa";
 import Login from "./pages/Login";
 import Summary from "./destinazComponents/Summary";
+import TourTuristico from "./pages/TourTuristico";
+import EsperienzeInNatura from "./pages/EsperienzeInNatura";
 
 import "./App.css";
 import Footer from "./components/Footer";
@@ -23,6 +25,8 @@ function App() {
         <Route path="/contatti" element={<Contatti />} />
         <Route path="/agenzie" element={<Mappa />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/tour-turistico" element={<TourTuristico />} />
+        <Route path="/esperienze-in-natura" element={<EsperienzeInNatura />} />
         <Route path="/summary" element={<Summary />} />
       </Routes>
 
