@@ -6,6 +6,7 @@ import croaziaImg from "../assets/croaziaa.jpg";
 import Type from "../destinazComponents/Type";
 import Guests from "../destinazComponents/Guests";
 import Dates from "../destinazComponents/Dates";
+import { useNavigate } from "react-router-dom";
 import {
   FaMapMarkerAlt,
   FaUmbrellaBeach,
@@ -138,6 +139,22 @@ export default function Destinazioni() {
     setDepartureDate("");
     setReturnDate("");
   };
+  const navigate = useNavigate();
+  const handleConfirm = () => {
+    navigate("/summary", {
+      state: {
+        activeSection,
+        selectedCountry,
+        selectedCity,
+        selectedArea,
+        selectedType,
+        adults,
+        children,
+        departureDate,
+        returnDate,
+      },
+    });
+  };
   // ------------- LOGICA -----------------
   const canSelectType = selectedCity !== null;
 
@@ -218,10 +235,10 @@ export default function Destinazioni() {
           </div>
         </button>
 
-        {/* Bottone cerca */}
+        {/* Bottone conferma */}
         <button
           disabled={!canConfirm}
-          onClick={() => setActiveSection("summary")}
+          onClick={handleConfirm}
           className="bg-orange-400 hover:bg-orange-500 text-white font-bold px-8 py-4 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Conferma
@@ -352,6 +369,7 @@ export default function Destinazioni() {
         setDepartureDate={setDepartureDate}
         returnDate={returnDate}
         setReturnDate={setReturnDate}
+        handleConfirm={handleConfirm}
       ></Dates>
     </div>
   );

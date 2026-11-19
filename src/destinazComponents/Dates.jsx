@@ -1,10 +1,10 @@
 export default function Dates({
   activeSection,
-  setActiveSection,
   departureDate,
   setDepartureDate,
   returnDate,
   setReturnDate,
+  handleConfirm
 }) {
   return (
     <>
@@ -88,7 +88,7 @@ export default function Dates({
               disabled={
                 !departureDate || !returnDate || returnDate <= departureDate
               }
-              onClick={() => setActiveSection("summary")}
+              onClick={handleConfirm}
               className="bg-[#FF8C52] text-white hover:bg-[#e07c4a]
           disabled:bg-gray-300 disabled:cursor-not-allowed
           font-bold h-12 w-32 rounded-lg mt-8 self-end transition-all"
