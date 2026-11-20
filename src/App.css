@@ -141,7 +141,7 @@
 }
 
 #spacer {
-  height: 88px;
+  height: 64px;
   border-top: 1px solid var(--border);
   @media (max-width: 1024px) {
     height: 48px;
@@ -177,6 +177,24 @@ header {
     rgba(255, 140, 82, 1) 0%,
     rgba(255, 140, 82, 1) 15%,
     rgba(255, 240, 197, 1) 85%
+  );
+}
+.gradiente{
+  background: #ff8c52;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 140, 82, 1) 0%,
+    rgba(255, 140, 82, 1) 15%,
+    rgba(255, 240, 197, 1) 85%
+  );
+}
+.gradienteTeal{
+  background: rgb(138, 214, 209);
+  background: linear-gradient(
+    270deg,
+    rgba(53, 159, 160, 1) 0%,
+    rgba(53, 159, 160, 1) 15%,
+    rgba(138, 214, 209,1) 85%
   );
 }
 

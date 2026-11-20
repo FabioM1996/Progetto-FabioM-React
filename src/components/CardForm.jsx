@@ -45,7 +45,7 @@ function CardForm({ addCity, tema, setTema }) {
       </p>
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col gap-1 w-80 mb-10 bg-[#FFF0C5] p-3 rounded-lg mt-4 mx-10"
+        className="flex flex-col gap-1 w-88 h-104 mb-10 bg-[#FFF0C5] p-3 rounded-lg mt-4 mx-10"
       >
         <label
           htmlFor="title"

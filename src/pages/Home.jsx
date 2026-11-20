@@ -6,8 +6,16 @@ import Card from "../components/Card";
 import CardForm from "../components/CardForm";
 import Hero from "../components/Hero";
 import Pennellata from "../components/Pennellata";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTiktok,
+  faInstagram,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 
 import badgeImg from "../assets/badge_visitato_cerchio.png";
+import koalaImg from "../assets/koala-photo.jpg";
+import koala2Img from "../assets/koala-cielo.jpg"; 
 
 export default function Home() {
   const addCity = (city) => {
@@ -189,13 +197,63 @@ export default function Home() {
           </div>
         )}
         <div className="space"></div>
-        <CardForm
-          addCity={addCity}
-          tema={temaCartolina}
-          setTema={setTemaCartolina}
-        ></CardForm>
+        <section className="flex justify-between">
+          <div>
+            <CardForm
+              addCity={addCity}
+              tema={temaCartolina}
+              setTema={setTemaCartolina}
+            ></CardForm>
+          </div>
+          <div className="flex gap-1 p-2 gradienteTeal relative top-18 h-104 rounded-lg ">
+            <img src={koalaImg} alt="koala" className="h-100" />
+            {/* <span className="text-white text-sm">
+              Foto di{" "}
+              <a href="https://unsplash.com/it/@tarrynm?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                Tarryn Grignet
+              </a>{" "}
+              su{" "}
+              <a href="https://unsplash.com/it/foto/un-koala-e-seduto-su-un-ramo-di-un-albero-S2Unqut4gvI?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
+                Unsplash
+              </a>
+            </span> */}
+            <img src={koala2Img} alt="koala" className="h-100" />
+          </div>
+        </section>
       </main>
       <section id="spacer"></section>
+      <section className="text-[#FFF0C5] gradiente p-2 w-4/5 m-auto">
+        <h3 className="text-3xl mb-2">Seguici sui social</h3>
+        <p>
+          Racconti per immagini, consigli di viaggio e opinioni degli utenti.
+          Cerca #KoalaViaggi ed immergiti in un’esperienza indimenticabile.
+        </p>
+        <div className="flex gap-4 justify-center mt-3 text-black">
+          <div className="flex flex-col gap-1">
+            <div>
+              <FontAwesomeIcon icon={faTiktok} />
+            </div>
+            <div>TikTok</div>
+            <div>@KoalaViaggi</div>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <div>
+              <FontAwesomeIcon icon={faInstagram} />
+            </div>
+            <div>Instagram</div>
+            <div>@Koala_Viaggi</div>
+          </div>
+
+          <div className="flex flex-col gap-1">
+            <div>
+              <FontAwesomeIcon icon={faYoutube} />
+            </div>
+            <div>YouTube</div>
+            <div>@koalaviaggi</div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
