@@ -141,6 +141,7 @@ export default function Home() {
             </Card>
           ))}
         </div>
+        {/* cartolina */}
         {selectedCity && (
           <div className="fixed inset-0 bg-[#00000099] flex justify-center items-center z-50">
             <div className="flex flex-col gap-2">
@@ -207,16 +208,6 @@ export default function Home() {
           </div>
           <div className="flex gap-1 p-2 gradienteTeal relative top-18 h-104 rounded-lg ">
             <img src={koalaImg} alt="koala" className="h-100" />
-            {/* <span className="text-white text-sm">
-              Foto di{" "}
-              <a href="https://unsplash.com/it/@tarrynm?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                Tarryn Grignet
-              </a>{" "}
-              su{" "}
-              <a href="https://unsplash.com/it/foto/un-koala-e-seduto-su-un-ramo-di-un-albero-S2Unqut4gvI?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">
-                Unsplash
-              </a>
-            </span> */}
             <img src={koala2Img} alt="koala" className="h-100" />
           </div>
         </section>
