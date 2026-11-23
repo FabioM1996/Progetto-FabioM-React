@@ -62,14 +62,14 @@ function Header() {
           </Link>
         </div>
         {/* SECONDO DIV */}
-        <a href="#">
+        <Link to="/contatti">
         <div className="p-1 ml-1 flex items-center gap-2 border-r border-[#9ca3af] hover:bg-orange-200 ">
           <span>📱</span>
           <div className="flex flex-col text-sm text-gray-600">
             <span className="text-center text-xs">Chiamaci al </span>
             <span className="text-start">00000000011</span>
           </div>
-        </div></a>
+        </div></Link>
         {/* TERZO DIV */}
         <div className="p-2 ml-1 mr-16 ">
           <Link to="/login">

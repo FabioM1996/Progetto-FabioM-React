@@ -16,7 +16,7 @@ export default function Summary() {
 
   return (
     <>
-      <section className=" bg-[#FFF0C5] p-3 mt-3 my-auto">
+      <section className=" bg-[#FFF0C5] p-3 mx-1 my-auto">
         <h3 className="mb-4 mt-2 text-3xl font-semibold">Riepilogo del tuo viaggio</h3>
         <div className="flex gap-10 justify-center p-2">
           <div>
@@ -30,6 +30,7 @@ export default function Summary() {
             <p>{`Tipologia: ${selectedType};  adulti: ${adults} - bambini: ${children} `}</p>
           </div>
         </div>
+        <button className="m-1 p-1.5 rounded-lg bg-[#FF8C52] text-gray-600 hover:bg-[#e07c4a] active:bg-[#8AD6D1]">Stampa il tuo biglietto 🖨️</button>
       </section>
     </>
   );

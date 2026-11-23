@@ -3,6 +3,8 @@ import spagnaImg from "../assets/spagnaa.jpg";
 import italiaImg from "../assets/italia.jpg";
 import turchiaImg from "../assets/turchia.jpg";
 import croaziaImg from "../assets/croaziaa.jpg";
+import australiaImg from "../assets/adelaide.jpg";
+import giamaicaImg from "../assets/giamaica.jpg";
 import Type from "../destinazComponents/Type";
 import Guests from "../destinazComponents/Guests";
 import Dates from "../destinazComponents/Dates";
@@ -96,6 +98,16 @@ export default function Destinazioni() {
         {
           name: "Islanda",
           cities: ["Reykjavik", "Akureyri", "Vik"],
+        },
+      ],
+    },
+    {
+      id: 4,
+      name: "Oceania",
+      countries: [
+        {
+          name: "Australia",
+          cities: ["Sydney", "Melbourne", "Brisbane", "Perth","Adelaide"],
         },
       ],
     },
@@ -346,6 +358,18 @@ export default function Destinazioni() {
                 <img
                   className="h-full w-full object-cover rounded-xl"
                   src={croaziaImg}
+                ></img>
+              )}
+              {selectedCountry?.name === "Australia" && (
+                <img
+                  className="h-full w-full object-cover rounded-xl"
+                  src={australiaImg}
+                ></img>
+              )}
+              {selectedCountry?.name === "Giamaica" && (
+                <img
+                  className="h-full w-full object-cover rounded-xl"
+                  src={giamaicaImg}
                 ></img>
               )}
             </div>
