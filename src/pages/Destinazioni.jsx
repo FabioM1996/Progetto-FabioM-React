@@ -189,7 +189,7 @@ export default function Destinazioni() {
 
   return (
     <div className="p-3">
-      <h3 className="mb-4 mt-2 text-3xl text-[#359FA0]">I nostri viaggi</h3>
+      <h3 className="mb-4 mt-2 text-4xl font-semibold text-[#359FA0]">I nostri viaggi</h3>
       {/* BARRA */}
       <div className="w-full max-w-6xl mx-auto mb-8 bg-[#FFF0C5] rounded-xl shadow-lg flex flex-wrap md:flex-nowrap overflow-hidden">
         {/* Destinazione */}
