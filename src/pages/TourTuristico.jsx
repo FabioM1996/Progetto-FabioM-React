@@ -1,9 +1,9 @@
 export default function TourTuristico() {
   return (
     <main className="bg-[#FFF0C5] min-h-screen p-6 m-2">
-      <h2 className="text-4xl font-bold text-[#359FA0] text-center mb-3">
+      <h3 className="text-4xl font-bold text-[#359FA0] text-center mb-3">
         Tour Organizzati
-      </h2>
+      </h3>
 
       <p className="text-center text-gray-600 mb-10">
         Scopri alcuni dei nostri itinerari più apprezzati e lasciati guidare

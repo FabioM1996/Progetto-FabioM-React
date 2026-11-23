@@ -1,9 +1,9 @@
 export default function EsperienzeInNatura() {
   return (
     <main className="bg-[#FFF0C5] min-h-screen p-6 m-2">
-      <h2 className="text-4xl font-bold text-[#359FA0] text-center mb-3">
+      <h3 className="text-4xl font-bold text-[#359FA0] text-center mb-3">
         Esperienze nella Natura
-      </h2>
+      </h3>
 
       <p className="text-center text-gray-600 mb-10">
         Vivi avventure indimenticabili tra paesaggi mozzafiato, animali
