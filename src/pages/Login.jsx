@@ -1,25 +1,33 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log("Email: ", email);
     console.log("Passoword: ", password);
+    localStorage.setItem(
+      "utente",
+      JSON.stringify({
+        email,
+        password,
+      }),
+    );
     setEmail("");
     setPassword("");
+    navigate("/destinazioni");
   }
+
   return (
     <div className="min-h-screen flex items-center justify-center px-4">
       <div className="w-full max-w-md rounded-xl bg-[#8AD6D1] p-8 shadow-lg">
         <h3 className="mb-2 text-center text-3xl font-bold text-gray-700">
           Accedi
         </h3>
-
-        {/* <p className="mb-8 text-center text-[#359FA0]">
-          Inserisci le tue credenziali per accedere
-        </p> */}
 
         <form onSubmit={handleSubmit}>
           {/* Campo Email */}

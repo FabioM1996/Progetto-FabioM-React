@@ -15,6 +15,12 @@ import {
 } from "react-icons/fa";
 import { useState } from "react";
 export default function Destinazioni() {
+  const navigate = useNavigate();
+  const utente = JSON.parse(localStorage.getItem("utente"));
+
+  if (!utente) {
+    navigate("/login");
+  }
   const destinations = [
     {
       id: 1,
@@ -139,7 +145,7 @@ export default function Destinazioni() {
     setDepartureDate("");
     setReturnDate("");
   };
-  const navigate = useNavigate();
+
   const handleConfirm = () => {
     navigate("/summary", {
       state: {
