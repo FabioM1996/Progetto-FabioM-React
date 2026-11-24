@@ -20,7 +20,7 @@ export default function Summary() {
         <h3 className="mb-4 mt-2 text-3xl font-semibold">Riepilogo del tuo viaggio</h3>
         <div className="flex gap-10 justify-center p-2">
           <div>
-            <h3 className="font-semibold">Nome e cognome dal login</h3>
+            <h3 className="font-semibold">Destinazione</h3>
             <p>{`${selectedArea.name} - ${selectedCountry.name} - ${selectedCity} `}</p>
           </div>
           <div>
