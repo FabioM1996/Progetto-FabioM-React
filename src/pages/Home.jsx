@@ -15,9 +15,11 @@ import {
 
 import badgeImg from "../assets/badge_visitato_cerchio.png";
 import koalaImg from "../assets/koala-photo.jpg";
-import koala2Img from "../assets/koala-cielo.jpg"; 
+import koala2Img from "../assets/koala-cielo.jpg";
 
 export default function Home() {
+  // collegamento
+  const cardSectionRef = useRef(null);
   const addCity = (city) => {
     setCities([...cities, city]);
   };
@@ -120,7 +122,7 @@ export default function Home() {
         </div>
         <Hero></Hero>
         <section className="w-full h-10 mb-2">
-          <h2 id="cartoline" className=" text-[#8AD6D1] mt-3">
+          <h2 id="cartoline" ref={cardSectionRef} className=" text-[#8AD6D1] mt-3">
             Seleziona una card per creare la tua cartolina personalizzata!
           </h2>
           <p className="text-[#359FA0]">
@@ -201,6 +203,7 @@ export default function Home() {
         <section className="flex justify-between">
           <div>
             <CardForm
+              cardSectionRef={cardSectionRef}
               addCity={addCity}
               tema={temaCartolina}
               setTema={setTemaCartolina}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function CardForm({ addCity, tema, setTema }) {
+function CardForm({ addCity, tema, setTema, cardSectionRef }) {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -17,6 +17,11 @@ function CardForm({ addCity, tema, setTema }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    cardSectionRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
     const city = {
       id: Math.random(),
       isVisited: formData.isVisited,
